@@ -16,11 +16,6 @@ services:
         volumes:
             - ./.docker/conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
             - ./blog:/var/www/html
-    composer:
-        image: composer
-        volumes:
-            - ./blog:/app
-        command: install
     db:
         image: postgres:10.1
         restart: always
